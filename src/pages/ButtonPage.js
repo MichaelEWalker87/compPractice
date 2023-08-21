@@ -5,7 +5,6 @@ import { GoBellFill, GoCloud, GoArchive } from "react-icons/go";
 function ButtonPage() {
     
     const handleClick = () => {
-        console.log("click")
     }
 
     return (

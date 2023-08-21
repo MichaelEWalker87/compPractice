@@ -1,30 +1,36 @@
 import React from "react";
-import Accordion from "./components/Accordion";
+import Sidebar from "./components/Sidebar";
+import Route from "./components/Route";
+import AccordionPage from "./pages/AccordionPage";
+import DropdownPage from "./pages/DropdownPage";
+import ButtonPage from './pages/ButtonPage';
+import ModalPage from "./pages/ModalPage";
+import Table from "./components/Table";
 
 function App() {
-    const items = [
-        {
-            id: "asdfq",
-            label: "can I use react in a project?",
-            content: "I sure can use react"
-        },
-        {
-            id: "asdfh",
-            label: "can I use js in a project?",
-            content: "I sure can use js"
-        },
-        {
-            id: "asdfg",
-            label: "can I use css in a project?",
-            content: "I sure can css on any project you want"
-        }
-    ];
 
     return (
-    <div>
-        <Accordion items={items} /> 
-    </div>
-   ) 
+        <div className="container mx-auto grid grid-cols-6 gap-4 mt-4">
+              <Sidebar />   
+            <div className="col-span-5">
+                <Route path="/accordion">
+                    <AccordionPage /> 
+                </Route>
+                <Route path="/buttons">
+                    <ButtonPage /> 
+                </Route>
+                <Route path="/">
+                    <DropdownPage /> 
+                </Route>
+                <Route path="/modal">
+                    <ModalPage /> 
+                </Route>
+                <Route path="/table">
+                    <Table /> 
+                </Route>
+            </div>
+        </div>
+    );
 }
 
 export default App;
