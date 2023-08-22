@@ -1,7 +1,6 @@
 import Link from "./Link";
-import classNames from "classnames";
 
-function Sidebar({ }) {
+function Sidebar() {
     const links = [
         {label: 'Dropdown', path:'/'},
         {label: 'Accordion', path:'/accordion'},
